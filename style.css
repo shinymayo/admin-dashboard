@@ -33,17 +33,15 @@ button {
     /* to center the elements inside */
     display: flex;
     flex-direction: column;
-    /* add box shadow, doesn't work */
-    box-shadow: 0px 10px 15px 3px rgba(0,0,0,1);
 }
 .main-content{
     background-color: #E2E8F0;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
     /* to position it */
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     /* making it into a grid */
     display: grid;
-    gap: 1rem;
     padding: 10px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -55,7 +53,18 @@ button {
     /* it's own grid */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* height: 78%; not so sure this is needed */
+    gap: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+
+}
+
+.project-content > .my-project {
+    /* so that the cards don't stretch too much */
+    max-height: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .announcements {
     grid-column: 3 / 4;
@@ -97,9 +106,9 @@ button {
 input {
     background-color: #E2E8F0;
     border: 1px solid #E2E8F0;
-    border-radius: 10px;
+    border-radius: 20px;
     outline: none;
-    height: 1rem;
+    height: 1.5rem;
     width: 500px;
 }
 .my-project {
@@ -111,6 +120,9 @@ input {
     background-color: #FFFFFF;
     border-radius: 5px;
     padding: 10px;
+}
+.announc-child {
+    padding: 2rem;
 }
 .my-project {
     /* later to replace margin with grid layout */
